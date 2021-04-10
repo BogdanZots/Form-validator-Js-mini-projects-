@@ -33,7 +33,7 @@ const isValid = input => {
     if (input.value !== '' && input.value.length >= 5) {
         showSuccess(input)
         isValidEmail(email.value) ? showSuccess(email) : showError(email, `${email.id} is no valid`)
-        isPasswordsSame(password, password2) ? showSuccess(password2) : showError(password2, `${password2.id.charAt(0).toUpperCase() + password2.id.slice(1,password2.id.length)} is not same`)
+        isPasswordsSame(password, password2) ? showSuccess(password2) : showError(password2, `${password2.id.charAt(0).toUpperCase() + password2.id.slice(1)} is not same`)
     } else {
         showError(input, `${input.id.charAt(0).toUpperCase() + input.id.slice(1,input.id.length)}  is required`)
     }
